@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct FavoritePost: Codable, Equatable, Identifiable {
     let userId : Int
     let id : Int

@@ -9,7 +9,5 @@ import Foundation
 
 class NetworkConstants {
     public static var shared: NetworkConstants = NetworkConstants()
-    
-   
     var serverAddress = "https://jsonplaceholder.typicode.com/posts"
 }

@@ -16,16 +16,14 @@ class UserPostViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
     
-    
     private let favoritesKey = "favoritePosts"
     @Published var favoritePosts: [FavoritePost] = []
     
-    
     init() {
-            loadFavorites()
-        }
+        loadFavorites()
+    }
     
-    func getData(completion: @escaping () -> Void) {
+    func getData(_ completion: @escaping () -> Void) {
         DispatchQueue.main.async {
             self.isLoading = true
             self.errorMessage = nil
@@ -77,11 +75,9 @@ class UserPostViewModel: ObservableObject {
         } else {
             favoritePosts.append(favoritePost)
         }
-        
         saveFavorites()
+        loadFavorites()
     }
-    
-    
 }
 
 
